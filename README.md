@@ -1,7 +1,7 @@
 # Week 4: JavaScript Fundamentals
 
 ## Author
-- **Name:** Franco Oxo
+- **Name:** Francis Osoro
 - **GitHub:** [@francooxo](https://github.com/francooxo)
 - **Date:** July 9, 2026
 
