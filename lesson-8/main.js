@@ -45,3 +45,22 @@ console.log(Object.entries(scores));
 for (const [subject, score] of Object.entries(scores)) {
   console.log(`${subject}: ${score}`);
 }
+
+const students = [
+  { name: "Alice", age: 22, grade: 85, major: "CS" },
+  { name: "Bob", age: 20, grade: 72, major: "Math" },
+  { name: "Charlie", age: 23, grade: 90, major: "CS" },
+  { name: "Diana", age: 21, grade: 88, major: "Physics" },
+  { name: "Eve", age: 22, grade: 95, major: "CS" },
+];
+
+const names = students.map((s) => s.name);
+const highAchievers = students.filter((s) => s.grade > 80);
+const charlie = students.find((s) => s.name === "Charlie");
+const avgGrade = students.reduce((sum, s) => sum + s.grade, 0) / students.length;
+const csMajors = students.filter((s) => s.major === "CS");
+const sortedByGrade = [...students].sort((a, b) => b.grade - a.grade);
+const hasTopStudent = students.some((s) => s.grade > 90);
+const allPassing = students.every((s) => s.grade >= 60);
+
+console.log(names, highAchievers, charlie, avgGrade, csMajors, sortedByGrade, hasTopStudent, allPassing);
