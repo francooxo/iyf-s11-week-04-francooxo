@@ -39,3 +39,40 @@ const yearTurning100 = birthYear + 100;
 console.log(`Approx age in days: ${ageInDays}`);
 console.log(`Approx age in hours: ${ageInHours}`);
 console.log(`Year you turn 100: ${yearTurning100}`);
+
+// Three function styles
+function calculateArea(width, height) {
+  return width * height;
+}
+
+const celsiusToFahrenheit = function (celsius) {
+  return (celsius * 9) / 5 + 32;
+};
+
+const isEven = (number) => number % 2 === 0;
+
+const getInitials = (fullName) =>
+  fullName
+    .split(" ")
+    .map((word) => word[0].toUpperCase())
+    .join("");
+
+const reverseString = (str) => str.split("").reverse().join("");
+
+// Default parameters
+function greet(name = "Guest", greeting = "Hello") {
+  return `${greeting}, ${name}!`;
+}
+
+const calculateTip = (bill, tipPercent = 15) => (bill * tipPercent) / 100;
+
+// Test calls
+console.log(calculateArea(5, 3));
+console.log(celsiusToFahrenheit(100));
+console.log(isEven(7));
+console.log(getInitials("John Doe"));
+console.log(reverseString("hello"));
+console.log(greet());
+console.log(greet("Alice"));
+console.log(greet("Bob", "Hi"));
+console.log(calculateTip(1000));
