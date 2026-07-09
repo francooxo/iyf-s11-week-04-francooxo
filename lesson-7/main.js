@@ -76,3 +76,47 @@ console.log(greet());
 console.log(greet("Alice"));
 console.log(greet("Bob", "Hi"));
 console.log(calculateTip(1000));
+
+// If/else
+function getGrade(score) {
+  if (score >= 90) return "A";
+  else if (score >= 80) return "B";
+  else if (score >= 70) return "C";
+  else if (score >= 60) return "D";
+  else return "F";
+}
+
+// Switch
+function getDayName(dayNumber) {
+  switch (dayNumber) {
+    case 0: return "Sunday";
+    case 1: return "Monday";
+    case 2: return "Tuesday";
+    case 3: return "Wednesday";
+    case 4: return "Thursday";
+    case 5: return "Friday";
+    case 6: return "Saturday";
+    default: return "Invalid day";
+  }
+}
+
+// 1. Print 1-100
+for (let i = 1; i <= 100; i++) console.log(i);
+
+// 2. Even numbers 1-50
+for (let i = 2; i <= 50; i += 2) console.log(i);
+
+// 3. FizzBuzz
+for (let i = 1; i <= 100; i++) {
+  if (i % 15 === 0) console.log("FizzBuzz");
+  else if (i % 3 === 0) console.log("Fizz");
+  else if (i % 5 === 0) console.log("Buzz");
+  else console.log(i);
+}
+
+// 4. Triangle of stars
+for (let i = 1; i <= 5; i++) {
+  console.log("*".repeat(i));
+}
+
+console.log(getGrade(85), getDayName(3));
